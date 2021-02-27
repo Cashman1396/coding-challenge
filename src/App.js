@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import Pets from './components/Pets'
 import axios from 'axios'
 
 function App() {
   const [pets, statePets] = useState([])
 
-  const getPets = async() => {
+  const getPets = async () => {
     try {
-      URL = "http://eulerity-hackathon.appspot.com/pets"
+      let URL = "http://eulerity-hackathon.appspot.com/pets"
       const response = await axios.get(URL)
       statePets(response.data)
   } catch (error) {
@@ -14,6 +15,17 @@ function App() {
   }
 }
 
+useEffect(() => {
+  getPets()
+}, [])
+
+
+return  (
+  <div>
+    <Pets pets={ pets } />
+  </div>
+  );
+}
 
 
 export default App

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import './pet-styles.css' 
 
 function PetController(props) {
-    const {pets, list, stateList} = props
+    const {pet, list, stateList} = props
 
     const [selectedImg, stateSelectedImg] = useState(false)
 
@@ -31,13 +31,13 @@ function PetController(props) {
    return (
        <>
         <div className="img-container">
-            <img className={`img-pets ${selectedImg && "selected-img"}`} src={pets.url} crossOrigin="anonymous" alt={pets.title}></img>
+            <img className={`img-pets ${selectedImg && "selected-img"}`} src={pet.url} crossOrigin="anonymous" alt={pet.title}></img>
             <div className="text">
-                <h2 className="pet-title">{pets.title}</h2>
-                {petsDate(pets.created)}
-                <p className="description">{pets.description}</p>
+                <h2 className="pet-title">{pet.title}</h2>
+                {petsDate(pet.created)}
+                <p className="description">{pet.description}</p>
                 <div className="download-btn-controller">
-                    <button onClick={(e) => handleClick(pets) } className="download-btn">Select Image</button>
+                    <button onClick={(e) => handleClick(pet) } className="download-btn">Select Image</button>
                 </div>
             </div>
         </div>
@@ -46,4 +46,4 @@ function PetController(props) {
 
 }
 
-export default PetController
+export default PetController;
