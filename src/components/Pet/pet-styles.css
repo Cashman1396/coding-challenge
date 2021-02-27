@@ -1,4 +1,49 @@
+.img-container {
+    height: 50%;
+    width: 500px;
+    margin-bottom: 3%;
+
+}
 .img-pets {
+    text-align: center;
     object-fit: contain;
     display:block;
+    border-radius: 15px;
+    max-height: 300%;
+    max-width: 100%;
+    margin: 15px auto;
+}
+
+.text {
+    padding: 15px;
+}
+
+.pet-title {
+    text-align: center;
+    margin: auto;
+}
+
+.text {
+    text-align: center;
+    padding: 6px;
+}
+
+.download-btn-controller {
+    text-align: center;
+}
+
+.download-btn {
+    border-radius: 3px;
+    color: rgb(114, 114, 226);
+    padding: 10px 32px;
+    display: inline-block;
+}
+
+.download-btn:hover {
+    background-color: lavender;
+    color:rgb(22, 137, 175);
+}
+
+.selected-img {
+    opacity: 0.3;
 }

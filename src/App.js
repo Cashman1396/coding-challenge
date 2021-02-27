@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Pets from './components/Pets'
 import axios from 'axios'
-
+import './App.css'
 function App() {
   const [pets, statePets] = useState([])
 

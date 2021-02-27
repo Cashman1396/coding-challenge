@@ -31,7 +31,9 @@ function PetController(props) {
    return (
        <>
         <div className="img-container">
+            <button onClick={(e) => handleClick(pet) }>
             <img className={`img-pets ${selectedImg && "selected-img"}`} src={pet.url} crossOrigin="anonymous" alt={pet.title}></img>
+            </button>
             <div className="text">
                 <h2 className="pet-title">{pet.title}</h2>
                 {petsDate(pet.created)}
